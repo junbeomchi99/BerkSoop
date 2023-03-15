@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  
+  로그인페이지
+    
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDNetysUKi71w8-R0t8mlUYLZanjSijiuE",
+        authDomain: "berksoop.firebaseapp.com",
+        projectId: "berksoop",
+        storageBucket: "berksoop.appspot.com",
+        messagingSenderId: "836217040896",
+        appId: "1:836217040896:web:51206f7e94cccd3e0828e5",
+        measurementId: "G-R25XZ5GQTN"
+        };
+        firebase.initializeApp(firebaseConfig);
+  </script>
+  
+  <div class="container mt-3">
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="name" id="name-new">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" placeholder="email" id="email-new">
+    </div>
+    <div class="mb-3">
+      <input type="password" class="form-control" placeholder="pw" id="pw-new">
+    </div>
+    <button type="submit" class="btn btn-primary" id="register">가입하기</button>
+ </div>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+  <script>
+    const db = firebase.firestore();
+    const storage = firebase.storage();
+
+    $('#register').click(function(){
+  
+    var 이메일 = $('#email-new').val();
+    var 패스워드 = $('#pw-new').val();
+
+    firebase.auth().createUserWithEmailAndPassword(이메일, 패스워드).then((result)=>{
+        console.log(result.user)
+    })
+    })
+        
+
+
+  </script>
+</body>
+</html>
