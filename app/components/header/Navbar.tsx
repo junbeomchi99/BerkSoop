@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useState } from "react";
 import { Modal } from "../modal/Modal";
@@ -15,7 +14,7 @@ export default function Navbar() {
             <button className = "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"><Link href ="/clubs"></Link><Link href='/' onClick={() => setShowModal(true)}>Login</Link></button>
             <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
                 <div className="p-6 lg:px-6 text-left">
-                    <h3 className="mb-4 text-xl font-medium">Sign In</h3>
+                    <h3 className="mb-4 text-2xl font-medium">Sign In</h3>
                     <form className="space-y-6" action="#">
                         <div>
                             <label htmlFor='email' className="block mb-2 text-sm font-medium">Email</label>
@@ -25,7 +24,7 @@ export default function Navbar() {
                             <label htmlFor='password' className="block mb-2 text-sm font-medium">Password</label>
                             <input type="password" name="password" id="password" className="bg-gray-50 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
                         </div>
-                        <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 block rounded-lg p-2.5">Login</button>
+                        <button type="submit" className="w-full text-gray-800 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 block rounded-lg p-2.5">Login</button>
                     </form>
                 </div>
             </Modal>
