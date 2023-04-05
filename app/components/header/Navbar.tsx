@@ -12,7 +12,7 @@ export default function Navbar() {
             <h1 className="text-2xl font-bold grid place-content-center mb-2 md:mb-0">
                 <Link href='/'>B-soop</Link>
             </h1>
-            <Link href='/' onClick={() => setShowModal(true)}>Login</Link>
+            <button className = "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"><Link href ="/clubs"></Link><Link href='/' onClick={() => setShowModal(true)}>Login</Link></button>
             <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
                 <div className="p-6 lg:px-6 text-left">
                     <h3 className="mb-4 text-xl font-medium">Sign In</h3>
