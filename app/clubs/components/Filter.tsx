@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = ({
+const searchFilter = ({
     onChange,
   }: {
     onChange: React.ChangeEventHandler;
@@ -14,3 +14,5 @@ const Search = ({
       />
     );
   };
+
+export default searchFilter;

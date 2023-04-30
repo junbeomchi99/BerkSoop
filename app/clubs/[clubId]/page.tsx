@@ -1,5 +1,5 @@
 import getClub from "@/app/lib/getClub"
-import getClubDetail from "@/app/lib/getClubDetail"
+import getAllClubs from "@/app/lib/getAllClubs"
 import ClubDetail from "./components/ClubDetail"
 import { Suspense } from "react"
 

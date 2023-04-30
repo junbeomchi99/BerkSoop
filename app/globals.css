@@ -21,4 +21,29 @@
     .searchFilter {
         @apply rounded px-[20px] py-[15px] border-berkeley-blue border-opacity-20 w-screen h-fit
     }
+
+    /* iconText css */
+    .iconText {
+        @apply flex flex-row gap-[2px]
+    }
+    .iconText-sm {
+        @apply h-[18px] w-fit
+    }
+    .iconText-lg {
+        @apply h-[25px] w-fit
+    }
+
+    /* tag css */
+    .tag {
+        @apply flex h-fit w-fit px-[20px] py-[10px] justify-center
+    }
+    .tag-category {
+        @apply border-berkeley-blue border-[1px] bg-berkeley-blue bg-opacity-2 text-base text-berkeley-blue font-medium
+    }
+    .tag-ethnicity {
+        @apply border-berkeley-yellow border-[1px] bg-berkeley-yellow bg-opacity-2 text-base text-berkeley-yellow font-medium
+    }
+    .tag-purpose {
+        @apply border-berkeley-skyblue border-[1px] bg-berkeley-skyblue bg-opacity-2 text-base text-berkeley-skyblue font-medium
+    }
 }
