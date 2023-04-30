@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer components {
     /* button css */
     .btn {
@@ -23,6 +19,6 @@
 
     /* searchFilter css */ 
     .searchFilter {
-        @apply rounded px-[20px] py-[15px] border-berkeley-blue border-opacity-20 w-fill h-fit
+        @apply rounded px-[20px] py-[15px] border-berkeley-blue border-opacity-20 w-screen h-fit
     }
 }

@@ -1,26 +1,26 @@
-import Link from 'next/link'
-import { Modal } from './components/modal/Modal'
+'use client'
+import { useRouter } from 'next/navigation'
+import Button from './components/button/Button'
+import Image from 'next/image'
+import HeroImage from 'public/HeroImage.svg'
 
 export default function Home() {
+  const router = useRouter()
+  const handleClick = () => router.push('/clubs')
+  
   return (
-    <main>
-      <div className="flex h-screen w-full justify-center items-center">
-        <div className = "flex">
-          <div className = "font-bold ml-2 w-100 h-45 flex-col mt-52 mr-10">
-              <h2 className="text-3xl">Get involved in</h2>
-              <h2 className = "text-3xl">Berkeley Campus Life</h2>
-              <button className = "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-5"><Link href ="/clubs"> Discover Clubs</Link></button>
-          </div>
-            <div className = "object-right-bottom mb-80">
-              <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/California_Golden_Bears_logo.svg/1200px-California_Golden_Bears_logo.svg.png"
-              alt = "Cal"
-              width = {600}
-              height = {600}
-            /> 
+      <div className="flex h-full w-full justify-center gap-[180px]">
+        <div className = "flex flex-col justify-center gap-[30px]">
+            <div className="text-h1 font-semibold whitespace-pre-wrap">
+              Get Involved in<br/>Berkeley Campus Life
+            </div>
+            <Button onClick={handleClick} size='btn-md'>
+              <div className='text-white text-h3'>Discover Clubs</div>
+            </Button>
+        </div>
+            <div>
+              <Image priority src={HeroImage} width={517} height={533} alt='college club'/>
             </div>
         </div>
-      </div>
-    </main>
-  )
-}
+ )
+};
