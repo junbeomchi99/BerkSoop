@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* button css */
+    .btn {
+        @apply rounded px-[30px] border-berkeley-blue border-[0.8px] w-fit h-fit
+    }
+    .btn-sm {
+        @apply py-[10px] bg-white hover:bg-slate
+    }
+    .btn-md {
+        @apply py-[15px] bg-berkeley-blue hover:bg-opacity-90
+    }
+    .disabled {
+        @apply bg-white
+    }
+
+    /* searchFilter css */ 
+    .searchFilter {
+        @apply rounded px-[20px] py-[15px] border-berkeley-blue border-opacity-20 w-fill h-fit
+    }
+}
